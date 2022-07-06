@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { ReduxRoot } from './containers/ReduxRoot';
+import { ReduxProvider } from './providers/ReduxProvider';
 
 const rootEl = document.getElementById('root');
-ReactDOM.render(<ReduxRoot />, rootEl);
+ReactDOM.render(<ReduxProvider />, rootEl);

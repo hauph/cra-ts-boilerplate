@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/styles';
 import * as React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { RouterSwitch } from 'react-typesafe-routes';
+import { FormattedMessage } from 'react-intl';
 import { withRoot } from './HOCs/withRoot';
 // import { useSelector } from 'react-redux';
 // import { useActions } from './actions';
@@ -30,7 +31,10 @@ function App() {
 			<div className={classes.root}>
 				<div className={classes.appFrame}>
 					<Snackbar />
-					<div className={classes.content}>{/* <RouterSwitch router={router} /> */}</div>
+					<div className={classes.content}>
+						{/* <RouterSwitch router={router} /> */}
+						<FormattedMessage id="homePage" />
+					</div>
 				</div>
 			</div>
 		</BrowserRouter>
@@ -49,15 +53,6 @@ const useStyles = makeStyles((theme: Theme) => ({
 		display: 'flex',
 		width: '100%',
 		height: '100%',
-	},
-	appBar: {
-		zIndex: theme.zIndex.drawer + 1,
-		position: 'absolute',
-	},
-	navIconHide: {
-		[theme.breakpoints.up('md')]: {
-			display: 'none',
-		},
 	},
 	content: {
 		backgroundColor: theme.palette.background.default,

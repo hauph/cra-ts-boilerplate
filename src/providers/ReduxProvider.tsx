@@ -7,7 +7,7 @@ import configureStore from '../redux/store/configureStore';
 
 const { persistor, store } = configureStore();
 
-export function ReduxRoot() {
+export function ReduxProvider() {
 	return (
 		<Provider store={store}>
 			<PersistGate loading={<Typography>Loading...</Typography>} persistor={persistor}>
