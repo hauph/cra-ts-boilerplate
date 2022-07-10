@@ -1,86 +1,22 @@
-# create-react-app-material-typescript-redux derived from Create React App example with Material-UI, TypeScript, Redux and Routing
-
-Made with our new CLI Tool [react-factory](https://github.com/innFactory/react-factory) for choosing the optional features and configure our individual setup.
-
-<img width="100%" src="screenshot.png" alt="example"/>
-
-Inspired by:
-
--   [Material-UI](https://github.com/mui-org/material-ui)
--   [react-redux-typescript-boilerplate](https://github.com/rokoroku/react-redux-typescript-boilerplate)
+# A boilerplate customized from [create-react-app-material-typescript-redux](https://github.com/innFactory/create-react-app-material-typescript-redux)
 
 ## Contains
 
 - [x] [Material-UI](https://github.com/mui-org/material-ui)
 - [x] [Typescript](https://www.typescriptlang.org/)
 - [x] [React](https://facebook.github.io/react/)
+- [x] [Create React App](https://create-react-app.dev/)
 - [x] [Redux](https://github.com/reactjs/redux)
+- [x] [Redux Toolkit](https://redux-toolkit.js.org/)
+- [x] [RTK Query](https://redux-toolkit.js.org/rtk-query/overview)
 - [x] [Redux-Thunk](https://github.com/gaearon/redux-thunk)
 - [x] [Redux-Persist](https://github.com/rt2zz/redux-persist)
 - [x] [React Router](https://github.com/ReactTraining/react-router)
 - [x] [Redux DevTools Extension](https://github.com/zalmoxisus/redux-devtools-extension)
-- [x] [TodoMVC example](http://todomvc.com)
-  
-Optional:
+- [x] [React Intl](https://formatjs.io/docs/react-intl/)
 
-- [ ] Cypress-Tests-Environment
-- [ ] Firebase-Integration
-- [ ] Github Actions (cypress-test, build-and-deploy to firebase)
-- [ ] Snackbars
-- [ ] Subfolder Library
-- [ ] Service Worker
-- [ ] PolyFills (IE11)
+## Commands
 
-
-## How to use
-
-We made a CLI Tool [react-factory](https://github.com/innFactory/react-factory) to include more options.
-
-<img width="70%" src="react_factory.png" alt="example"/>
-
-First install  [Yeoman](http://yeoman.io) and the CLI Tool:
-```bash
-npm install -g yo
-npm install -g generator-react-factory
-```
-
-Then generate your new project:
-
-```bash
-yo react-factory
-```
-
-
-
-## Enable Prettier [OPTIONAL]
-
-1.  Step: Install the Prettier plugin (e.g. the one of Esben Petersen)
-2.  Add the following snippet to your settings in VSCode:
-
-```json
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-       "source.organizeImports": true // optional
-   },
-```
-
-## Enable project snippets [OPTIONAL]
-
-Just install following extension:
-
-<img width="70%" src="vscode_snippet0.png" alt="Project Snippet"/>
-
-After that you can start to type `fcomp` (_for function component_) and you get a template for a new component.
-
-<img width="70%" src="vscode_snippet1.png" alt="Project Snippet"/>
-<img width="70%" src="vscode_snippet2.png" alt="Project Snippet"/>
-
-## The idea behind the example
-
-This example demonstrate how you can use [Create React App](https://github.com/facebookincubator/create-react-app) with [TypeScript](https://github.com/Microsoft/TypeScript).
-
-## Contributors
-
--   [Anton Spöck](https://github.com/spoeck)
-
-Powered by [innFactory](https://innfactory.de/)
+`yarn install`: Install source code
+`yarn start`: Start source code
+`yarn build`: Build source code for production
