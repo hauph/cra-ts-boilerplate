@@ -4,6 +4,10 @@ const reducerPath = 'api';
 
 export const RENEW_AFTER_LOGIN_TAG = 'ReviewAfterLogin';
 
+/**
+ * Use rootApiQuery.injectEndpoints to create other api queries
+ * https://redux-toolkit.js.org/rtk-query/usage/code-splitting
+ */
 export const rootApiQuery = createApi({
     reducerPath,
     baseQuery: fetchBaseQuery({
