@@ -1,3 +1,5 @@
+import type { PayloadAction } from '@reduxjs/toolkit'
+
 export interface SnackbarEvent {
 	message: string;
 	severity: "error" | "success" | "info";
@@ -10,17 +12,6 @@ export enum SnackbarEventActions {
 	PURGE_SNACKBARS = "PURGE_SNACKBARS",
 }
 
-interface SnackbarEventActionType<T, P> {
-	type: T;
-	payload: P;
-}
-
-export type SnackbarEventAction =
-	| SnackbarEventActionType<
-			typeof SnackbarEventActions.ADD_SNACKBAR_EVENT,
-			SnackbarEvent
-	  >
-	| SnackbarEventActionType<
-			typeof SnackbarEventActions.DELETE_SNACKBAR_EVENT,
-			SnackbarEvent
-	  >;
+export type SnackbarEventAction = PayloadAction<
+	SnackbarEvent
+>

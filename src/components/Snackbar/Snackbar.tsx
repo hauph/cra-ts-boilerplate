@@ -4,14 +4,15 @@ import { Alert } from '@material-ui/lab';
 import * as React from 'react';
 import { useSelector } from 'react-redux';
 import { useActions } from '../../redux/actions';
-import * as SnackbarEventActions from '../../redux/actions/snackbarEvent';
+// import * as SnackbarEventActions from '../../redux/actions/snackbarEvent';
 import { SnackbarEvent } from '../../model/snackbarEvent';
 import { RootState } from '../../redux/reducers';
+import { SnackbarEvents } from '../../redux/slices';
 
 export function Snackbar() {
 	const classes = useStyles();
 	const snackbarEvents: SnackbarEvent[] = useSelector((state: RootState) => state.snackbarEvents);
-	const snackbarEventActions: typeof SnackbarEventActions = useActions(SnackbarEventActions);
+	// const snackbarEventActions: typeof SnackbarEventActions = useActions();
 	const [currentEvent, setCurrentEvent] = React.useState(snackbarEvents.length > 0 ? snackbarEvents[0] : undefined);
 
 	React.useEffect(() => {
@@ -23,7 +24,8 @@ export function Snackbar() {
 			return;
 		}
 		if (currentEvent) {
-			snackbarEventActions.deleteSnackbarEvent(currentEvent);
+			// snackbarEventActions.deleteSnackbarEvent(currentEvent);
+			useActions(SnackbarEvents.DELETE_SNACKBAR_EVENT(currentEvent));
 		}
 	};
 

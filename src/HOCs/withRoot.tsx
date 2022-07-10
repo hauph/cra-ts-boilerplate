@@ -3,7 +3,7 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import React, { useState, useMemo } from 'react';
 import * as locales from '@mui/material/locale';
-import { IntlProvider } from '../providers/IntlProvider';
+import { IntlProvider } from '../providers';
 
 // A theme with custom primary and secondary color.
 // It's optional.

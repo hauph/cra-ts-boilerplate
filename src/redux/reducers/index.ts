@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
 
-import * as snackbarReducer from './snackbarEvent';
+import { SnackbarEvents } from '../slices'
+import { rootApiQuery } from '../api-query'
 import { SnackbarEvent } from "../../model";
-
 
 export interface RootState {
 	snackbarEvents: SnackbarEvent[];
@@ -10,5 +10,8 @@ export interface RootState {
 
 export default () =>
 	combineReducers({
-		...snackbarReducer,
+		[SnackbarEvents.sliceName]: SnackbarEvents.reducer,
+
+		// API sections
+		[rootApiQuery.reducerPath]: rootApiQuery.reducer,
 	});

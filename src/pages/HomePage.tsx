@@ -1,10 +1,15 @@
-import { makeStyles } from '@material-ui/styles';
 import * as React from 'react';
+import { makeStyles } from '@material-ui/styles';
+import { FormattedMessage } from 'react-intl';
 
 export function HomePage() {
 	const classes = useStyles();
 
-	return <div className={classes.root}>Homepage</div>;
+	return (
+		<div className={classes.root}>
+			<FormattedMessage id="homePage" />
+		</div>
+	);
 }
 
 const useStyles = makeStyles({
@@ -14,18 +19,5 @@ const useStyles = makeStyles({
 		paddingTop: 20,
 		paddingLeft: 15,
 		paddingRight: 15,
-	},
-
-	centerContainer: {
-		flex: 1,
-		height: '90%',
-		display: 'flex',
-		alignItems: 'center',
-		justifyContent: 'center',
-		flexDirection: 'column',
-	},
-
-	button: {
-		marginTop: 20,
 	},
 });

@@ -3,16 +3,14 @@
 import { Theme } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/styles';
 import * as React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { RouterSwitch } from 'react-typesafe-routes';
-import { FormattedMessage } from 'react-intl';
+import { BrowserRouter } from 'react-router-dom';
 import { withRoot } from './HOCs/withRoot';
+import { RouteProvider } from './providers';
 // import { useSelector } from 'react-redux';
 // import { useActions } from './actions';
 // import * as ConfigActions from './actions/config';
 // import { RootState } from './reducers';
-import { router } from './Router';
-import './App.scss';
+import './styles/App.scss';
 
 import { Snackbar } from './components/Snackbar';
 
@@ -32,8 +30,7 @@ function App() {
 				<div className={classes.appFrame}>
 					<Snackbar />
 					<div className={classes.content}>
-						{/* <RouterSwitch router={router} /> */}
-						<FormattedMessage id="homePage" />
+						<RouteProvider />
 					</div>
 				</div>
 			</div>
