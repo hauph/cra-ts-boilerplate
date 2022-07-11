@@ -4,7 +4,7 @@ import { createLogger } from 'redux-logger';
 import { PersistConfig, persistReducer, persistStore } from 'redux-persist';
 import thunk from 'redux-thunk';
 import rootReducer from '../reducers/index';
-import { rootApiQuery } from '../api-query';
+import { rootApiQuery } from '../api-queries';
 
 const persistConfig: PersistConfig<any> = {
 	key: 'root',

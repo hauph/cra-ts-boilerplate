@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 
 import { SnackbarEvents } from '../slices'
-import { rootApiQuery } from '../api-query'
+import { rootApiQuery } from '../api-queries'
 import { SnackbarEvent } from "../../model";
 
 export interface RootState {
